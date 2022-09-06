@@ -1,0 +1,207 @@
+/* EXTERNAL */
+
+.colors {
+    color: hsl(179, 62%, 43%); /*Cyan*/
+    color: hsl(71, 73%, 54%); /*Bright Yellow*/
+    
+    color: hsl(204, 43%, 93%); /*Light Gray*/
+    color: hsl(218, 22%, 67%); /*Grayish Blue*/
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+/*
+    font-family: 'Karla', sans-serif;
+*/
+
+/* GENERAL */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: hsl(204, 43%, 93%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SPECIFY */
+
+.hero-card {
+    width: 635px;
+    height: 475px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45% 55%;
+    background: white;
+    border-radius: 10px;
+}
+    .hero-card .up {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+        .hero-card .up h1 {
+            color: hsl(179, 62%, 43%);
+            padding-bottom: 10px;
+        }
+        .hero-card .up h2 {
+            color: hsl(71, 73%, 54%);
+            font-size: 19px;
+        }
+        .hero-card .up p {
+            color: hsl(218, 22%, 67%);
+            max-width: 516px;
+        }
+
+    .hero-card .down {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+        .hero-card .down .left {
+            background: hsl(179, 62%, 43%);
+            padding: 40px;
+            border-radius: 0 0 0 10px;
+
+        }
+            .hero-card .down .left h2 {
+                color: white;
+                margin-bottom: 30px;
+                font-size: 22px;
+            }
+            .hero-card .down .left p:first-of-type {
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 15px;
+            }
+                .hero-card .down .left p:first-of-type span {
+                    color: white;
+                    font-size: 25px;
+                    font-weight: 700;
+                }
+            .hero-card .down .left p:last-of-type {
+                color: white;
+                margin-bottom: 30px;
+            }
+            .hero-card .down .left button {
+                width: 235px;
+                height: 50px;
+                color: white;
+                border: none;
+                background: hsl(71, 73%, 54%);
+                border-radius: 5px;
+                box-shadow: 0 5px 10px rgba(128, 128, 128, 0.526);
+                cursor: pointer;
+            }
+
+        .hero-card .down .right {
+            background: hsla(179, 48%, 48%, 0.846);
+            padding: 40px;
+            border-radius: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            color: white;
+        }
+            .hero-card .down .right h1 {
+                font-size: 22px;
+            }
+
+@media (max-width: 650px) {
+    main {
+        width: 100vw;
+        min-height: 130vh;
+        background: hsl(204, 43%, 93%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 15px;
+    }
+
+    .hero-card {
+        width: 312px;
+        height: 725px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 35% 65%;
+        background: white;
+        border-radius: 10px;
+    }
+        .hero-card .up {
+            padding: 22px 22px 0 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .hero-card .down {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row: 40% 60%;
+        }
+            .hero-card .down .left {
+                background: hsl(179, 62%, 43%);
+                padding: 22px 22px 0 22px;
+                border-radius: 0 0 0 0;
+            }
+            .hero-card .down .left button {
+                width: 263px;
+                height: 50px;
+                color: white;
+                border: none;
+                background: hsl(71, 73%, 54%);
+                border-radius: 5px;
+                box-shadow: 0 5px 10px rgba(128, 128, 128, 0.526);
+                cursor: pointer;
+            }
+
+            .hero-card .down .right {
+                background: hsla(179, 48%, 48%, 0.846);
+                padding: 22px;
+                border-radius: 0 0 10px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                color: white;
+            }
+            .hero-card .down .right p {
+                max-width: 189px;
+            }
+}
